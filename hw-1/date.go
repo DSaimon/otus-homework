@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/beevik/ntp"
 	"log"
-	"os"
 )
 
 func GetCurrentTime() {
@@ -15,5 +14,4 @@ func GetCurrentTime() {
 	}
 
 	fmt.Printf("Network time: %v\n", time)
-	os.Exit(1)
 }
