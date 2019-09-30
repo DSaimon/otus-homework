@@ -5,11 +5,12 @@ import (
 	"strings"
 )
 
-type Pair struct {
+type pair struct {
 	Key   string
 	Value int
 }
 
+// AnaliseFrequency make frequency analise of text. Returns 10 words or less with highest frequency
 func AnaliseFrequency(text string) []string {
 	var maxResultLength = 10
 
@@ -20,9 +21,9 @@ func AnaliseFrequency(text string) []string {
 		frequencyMap[word] = frequencyMap[word] + 1
 	}
 
-	var pairs []Pair
+	var pairs []pair
 	for key, value := range frequencyMap {
-		pairs = append(pairs, Pair{key, value})
+		pairs = append(pairs, pair{key, value})
 	}
 
 	sort.Slice(pairs, func(i, j int) bool {
