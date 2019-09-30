@@ -1,7 +1,6 @@
 package analysis
 
 import (
-	"fmt"
 	"sort"
 	"strings"
 )
@@ -29,9 +28,6 @@ func AnaliseFrequency(text string) []string {
 	sort.Slice(pairs, func(i, j int) bool {
 		return pairs[i].Value > pairs[j].Value
 	})
-
-	fmt.Printf("%v\n", pairs)
-
 
 	var result []string
 	var resultLength int
