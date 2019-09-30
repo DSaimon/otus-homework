@@ -1,11 +1,21 @@
-package main
+package unpacking
 
 import (
-	"github.com/ivasyutaalexey/go-lessons/hw-1"
-)
+	"fmt"
+	"strconv"
+	)
 
-func main() {
-	date.GetCurrentTime()
+func unpackString(str string) string {
+	for _, char := range str {
+		stringChar := string(char)
+		_, err := strconv.ParseInt(stringChar, 10, 0)
+
+		if err != nil {
+			fmt.Printf("%s %v\n", stringChar, err)
+		}
+	}
+
+	return ""
 }
 
 
