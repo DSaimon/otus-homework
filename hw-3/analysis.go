@@ -50,7 +50,7 @@ func AnaliseFrequency(text string) []string {
 
 	// make slice with capacity = resultLength and length = 0 to avoid allocations
 	result := make([]string, 0, resultLength)
-	for i := 0; i < resultLength; i++ {
+	for i := range pairs[:resultLength] {
 		result = append(result, pairs[i].Key)
 	}
 
